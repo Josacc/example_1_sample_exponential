@@ -1,10 +1,7 @@
 library(shiny)
 library(tidyverse)
-library(readxl)
 library(plotly)
 library(scales)
-library(DT)
-library(shinydashboard)
 library(shinyWidgets)
 library(shinycssloaders)
 library(shinyFeedback)
@@ -70,7 +67,7 @@ fluidPage(
     ),
     mainPanel(
       width = 7,
-      plotOutput(outputId = 'plot')
+      plotlyOutput(outputId = 'plot')
     )
   )
 )

@@ -1,15 +1,11 @@
 library(shiny)
 library(tidyverse)
-library(readxl)
 library(plotly)
 library(scales)
-library(DT)
-library(shinydashboard)
 library(shinyWidgets)
 library(shinycssloaders)
 library(shinyFeedback)
-library(mosaic)
-library(mosaicCalc)
+
 
 
 function(input, output, session) {
@@ -48,20 +44,8 @@ function(input, output, session) {
     )
   })
 
-  output$plot <- renderPlot({
-    pdf_exponential <- makeFun(
-      100 * exp((-x * n) / beta) ~ x,
-      # x    = input$x,
-      n    = input$n,
-      beta = input$beta
-    )
-    plotFun(
-      pdf_exponential(x) ~ x,
-      xlim = range(0 , 1) ,
-      main = "pdf_exponential" ,
-      xlab = "Time units" ,
-      ylab = "Probability"
-    )
+  output$plot <- renderPlotly({
+    plot_fun(input$n, input$beta)
   })
 
 
