@@ -1,1 +1,1 @@
-# example_1_sample_exponential
+# practice_1_sample_exponential
