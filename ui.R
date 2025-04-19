@@ -8,13 +8,12 @@ library(shinyFeedback)
 
 
 fluidPage(
-  titlePanel("Lifetime modeling of n identical components of a circuit"),
   br(), br(),
   fluidRow(
     column(
-      width = 3,
+      width = 5,
       h4(
-        p(strong('Sample pdf exponential')),
+        p(strong('Lifetime modeling of n identical components of a circuit')),
         style = 'color: #3c8dbc'
       )
     ),
@@ -63,6 +62,20 @@ fluidPage(
         min     = 1,
         max     = 100,
         animate = TRUE
+      ),
+      br(),
+      HTML(paste0((
+        "<b style = 'font-weight: bold;'>
+          Choose the number of time units:
+           </b>"))),
+      numericInput(
+        inputId = 'unit_time',
+        label   = '',
+        value   = 1,
+        min     = 1,
+        max     = 100,
+        step    = 1,
+        width   = '20%'
       )
     ),
     mainPanel(
