@@ -13,7 +13,7 @@ fluidPage(
     column(
       width = 5,
       h4(
-        p(strong('Lifetime modeling of n identical components of a circuit')),
+        p(strong('Lifetime modeling of n identical components of a system')),
         style = 'color: #3c8dbc'
       )
     ),
@@ -52,7 +52,7 @@ fluidPage(
        br(),
       HTML(paste0((
         "<b style = 'font-weight: bold;'>
-          Choose the number of identical components in the circuit:
+          Choose the number of identical components in the system:
            </b>"))),
       sliderInput(
         inputId = 'n',

@@ -21,11 +21,19 @@ function(input, output, session) {
         style = "text-align: justify;
         margin-left:  auto;
         margin-right: auto;",
-        tags$b("Lifetime modeling of 'n' identical components of a circuit",
+        tags$b('Lifetime modeling of "n" identical components of a system',
                style = "font-weight: bold"),
         tags$br(), tags$br(),
-        'What is the probability that all the componentes last more than "x"
-        years?',
+        'What is the probability that all components of a system last more
+        than "x" years?',
+        tags$br(), tags$br(),
+        'This app uses a model based on an exponential distribution to analyze
+        the lifetime of a system that contains a specified number of identical
+        components.',
+        tags$br(),
+        'The average lifetime of a component and the number of identical
+        components in the system determine the probability that the system will
+        remain operational after "x" years.',
       ),
       html  = TRUE,
       width = "55%"
